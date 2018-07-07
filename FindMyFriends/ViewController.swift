@@ -19,11 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainMapView: MKMapView!
     var updateLocationEnable: Bool = true
     var userLocationEnable: Bool = true
+    var moveTrackEnable: Bool = true
     var userLocations = [CLLocationCoordinate2D]()
     let locationManager = CLLocationManager()
     
     let POLYLINE_WIDTH = 3.0
-    let MAX_DISTANCE = 50.0
+    let MIN_DISTANCE = 30.0
     
     
     override func viewDidLoad() {
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.activityType = .automotiveNavigation
-        locationManager.distanceFilter = MAX_DISTANCE
+        locationManager.distanceFilter = MIN_DISTANCE
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,7 +97,7 @@ class ViewController: UIViewController {
         if let controller = controller {
             self.updateLocationEnable = controller.updateLocationSwitch.isOn
             self.userLocationEnable = controller.userLocationSwitch.isOn
-            
+            self.moveTrackEnable = controller.moveTrackSwitch.isOn
         }
     }
     
@@ -105,6 +106,7 @@ class ViewController: UIViewController {
         if segue.identifier == "settingSegue", let controller = segue.destination as? SettingTableViewController {
             controller.updateLocation = updateLocationEnable
             controller.userLocation = userLocationEnable
+            controller.moveTrack = moveTrackEnable
         }
     }
     
@@ -133,10 +135,14 @@ extension ViewController: CLLocationManagerDelegate {
             }            
         }
         
-        // Add polyline on the map.
-        let polyline = MKPolyline(coordinates: userLocations, count: userLocations.count)
-        mainMapView.addOverlay(polyline)
-
+        if moveTrackEnable {
+            // Add polyline on the map.
+            let polyline = MKPolyline(coordinates: userLocations, count: userLocations.count)
+            mainMapView.addOverlay(polyline)
+        } else {
+            mainMapView.removeOverlays(mainMapView.overlays)
+        }
+        
     }
     
 }

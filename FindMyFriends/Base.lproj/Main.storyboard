@@ -80,17 +80,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="3CJ-OB-9jJ">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="3CJ-OB-9jJ">
                                                     <rect key="frame" x="32" y="10" width="313.5" height="29.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserLocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpA-yN-Cbg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="29.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="User Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpA-yN-Cbg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="29.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-GZ-eOf">
-                                                            <rect key="frame" x="264.5" y="0.0" width="51" height="29.5"/>
+                                                            <rect key="frame" x="265" y="0.0" width="50.5" height="29.5"/>
                                                         </switch>
                                                     </subviews>
                                                 </stackView>
@@ -110,11 +110,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-r3-W5J">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="138" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-r3-W5J">
                                                     <rect key="frame" x="32" y="10" width="313.5" height="29.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="UpdateLocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-9p-f9L">
-                                                            <rect key="frame" x="0.0" y="0.0" width="122.5" height="29.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Update Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-9p-f9L">
+                                                            <rect key="frame" x="0.0" y="0.0" width="126.5" height="29.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -133,6 +133,36 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="8TU-VV-ZZd">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8TU-VV-ZZd" id="8yP-Ma-uoo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Lvu-K7-bW5">
+                                                    <rect key="frame" x="32" y="10" width="313.5" height="29.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Move Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic9-ZK-FAK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="29.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-zo-GJE">
+                                                            <rect key="frame" x="264.5" y="0.0" width="51" height="29.5"/>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lvu-K7-bW5" firstAttribute="top" secondItem="8yP-Ma-uoo" secondAttribute="top" constant="10" id="305-iY-kmK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lvu-K7-bW5" secondAttribute="trailing" constant="29.5" id="c7u-iK-5mm"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lvu-K7-bW5" secondAttribute="bottom" constant="10" id="rKm-0N-odL"/>
+                                                <constraint firstItem="Lvu-K7-bW5" firstAttribute="leading" secondItem="8yP-Ma-uoo" secondAttribute="leading" constant="32" id="vsI-26-EnG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -143,8 +173,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Setting" id="uNo-8l-VnO"/>
                     <connections>
+                        <outlet property="moveTrackSwitch" destination="TPt-zo-GJE" id="Dv5-UU-QAj"/>
                         <outlet property="updateLocationSwitch" destination="Ff1-1I-uLo" id="H9B-hD-yR8"/>
-                        <outlet property="userLocationSwitch" destination="Gro-GZ-eOf" id="Bn9-0G-qPq"/>
+                        <outlet property="userLocationSwitch" destination="Gro-GZ-eOf" id="v71-a9-3zg"/>
                         <segue destination="Pbh-c4-Yd5" kind="unwind" identifier="unwindSettingSegue" unwindAction="unwindSettingSegue:" id="RbT-To-7vv"/>
                     </connections>
                 </tableViewController>

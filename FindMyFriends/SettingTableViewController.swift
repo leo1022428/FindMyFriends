@@ -12,10 +12,12 @@ class SettingTableViewController: UITableViewController {
 
     var updateLocation: Bool = true
     var userLocation: Bool = true
+    var moveTrack: Bool = true
     
     @IBOutlet weak var updateLocationSwitch: UISwitch!
     @IBOutlet weak var userLocationSwitch: UISwitch!
-
+    @IBOutlet weak var moveTrackSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,7 @@ class SettingTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         updateLocationSwitch.isOn = updateLocation
         userLocationSwitch.isOn = userLocation
+        moveTrackSwitch.isOn = moveTrack
     }
 
     override func viewWillDisappear(_ animated: Bool) {

@@ -49,9 +49,8 @@ class FriendTableViewController: UITableViewController {
                     return
                 }
             }
-            
         }
-        
+
     }
 
     // MARK: - Table view data source
