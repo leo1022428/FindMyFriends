@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A36E845504CCFF2F09775CB9 /* Pods_FindMyFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE6406EDBE9B1087C663E63 /* Pods_FindMyFriends.framework */; };
+		B325A9122116B0C200DE4591 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B325A9112116B0C200DE4591 /* .gitignore */; };
+		B34F180920F2439700B284AF /* LocationHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F180820F2439700B284AF /* LocationHistoryTableViewController.swift */; };
+		B35884B120F1FE4E00938EAB /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35884B020F1FE4E00938EAB /* LogManager.swift */; };
 		B358B83720EA6BAE002CF702 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B358B83620EA6BAE002CF702 /* SettingTableViewController.swift */; };
 		B3E9A5E720E9C7AA003AD82A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9A5E620E9C7AA003AD82A /* AppDelegate.swift */; };
 		B3E9A5E920E9C7AA003AD82A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9A5E820E9C7AA003AD82A /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		7F1DA1DFD24746C7F1C0DEFF /* Pods-FindMyFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends.release.xcconfig"; sourceTree = "<group>"; };
 		A2792805F632546E0E7F041A /* Pods-FindMyFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends.debug.xcconfig"; sourceTree = "<group>"; };
+		B325A9112116B0C200DE4591 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B34F180820F2439700B284AF /* LocationHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHistoryTableViewController.swift; sourceTree = "<group>"; };
+		B35884B020F1FE4E00938EAB /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		B358B83620EA6BAE002CF702 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		B3E9A5E320E9C7AA003AD82A /* FindMyFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9A5E620E9C7AA003AD82A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		B3E9A5DA20E9C7AA003AD82A = {
 			isa = PBXGroup;
 			children = (
+				B325A9112116B0C200DE4591 /* .gitignore */,
 				B3E9A5E520E9C7AA003AD82A /* FindMyFriends */,
 				B3E9A5E420E9C7AA003AD82A /* Products */,
 				2A6265CC818C2B8489E670FA /* Pods */,
@@ -85,8 +92,10 @@
 				B3E9A5FC20E9CAEF003AD82A /* FriendTableViewController.swift */,
 				B3E9A5FE20E9CB2A003AD82A /* FriendTableViewCell.swift */,
 				B358B83620EA6BAE002CF702 /* SettingTableViewController.swift */,
+				B34F180820F2439700B284AF /* LocationHistoryTableViewController.swift */,
 				B3E9A60C20E9FE88003AD82A /* Friend.swift */,
 				B3E9A60E20EA1490003AD82A /* LocationCommunicator.swift */,
+				B35884B020F1FE4E00938EAB /* LogManager.swift */,
 				B3E9A5EA20E9C7AA003AD82A /* Main.storyboard */,
 				B3E9A5ED20E9C7AC003AD82A /* Assets.xcassets */,
 				B3E9A5EF20E9C7AC003AD82A /* LaunchScreen.storyboard */,
@@ -114,7 +123,7 @@
 				B3E9A5DF20E9C7AA003AD82A /* Sources */,
 				B3E9A5E020E9C7AA003AD82A /* Frameworks */,
 				B3E9A5E120E9C7AA003AD82A /* Resources */,
-				243305E4B549A92D2422C53E /* [CP] Embed Pods Frameworks */,
+				D9B2D7203464AB3E6FE10181 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B325A9122116B0C200DE4591 /* .gitignore in Resources */,
 				B3E9A5F120E9C7AC003AD82A /* LaunchScreen.storyboard in Resources */,
 				B3E9A5EE20E9C7AC003AD82A /* Assets.xcassets in Resources */,
 				B3E9A5EC20E9C7AA003AD82A /* Main.storyboard in Resources */,
@@ -177,24 +187,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		243305E4B549A92D2422C53E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		29E9550816215B31C14ACB33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +205,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D9B2D7203464AB3E6FE10181 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyFriends/Pods-FindMyFriends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,12 +230,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35884B120F1FE4E00938EAB /* LogManager.swift in Sources */,
 				B358B83720EA6BAE002CF702 /* SettingTableViewController.swift in Sources */,
 				B3E9A60F20EA1490003AD82A /* LocationCommunicator.swift in Sources */,
 				B3E9A60D20E9FE88003AD82A /* Friend.swift in Sources */,
 				B3E9A5E920E9C7AA003AD82A /* ViewController.swift in Sources */,
 				B3E9A5FD20E9CAEF003AD82A /* FriendTableViewController.swift in Sources */,
 				B3E9A5E720E9C7AA003AD82A /* AppDelegate.swift in Sources */,
+				B34F180920F2439700B284AF /* LocationHistoryTableViewController.swift in Sources */,
 				B3E9A5FF20E9CB2A003AD82A /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,21 +62,29 @@ class FriendTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return friends.count
+        return friends.count + 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? FriendTableViewCell
         
-        friend = friends[indexPath.row]
-        
-        if let cell = cell, let friend = friend {
-            cell.nameLabel.text = friend.friendName
-            cell.locationLabel.text = "Lat: \(friend.lat), Lon: \(friend.lon)"
+        // When index == 0, cell is userHistoryLocations
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             return cell
         } else {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? FriendTableViewCell
+            
+            // Index == 0 is userHistoryLocations
+            friend = friends[indexPath.row - 1]
+            
+            if let cell = cell, let friend = friend {
+                cell.nameLabel.text = friend.friendName
+                cell.lastUpdateTime.text = "LastUpdateTime: \(friend.lastUpdateDateTime)"
+                return cell
+            } else {
+                return UITableViewCell()
+            }
         }
     }
     

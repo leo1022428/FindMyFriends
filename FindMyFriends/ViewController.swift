@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var moveTrackEnable: Bool = true
     var userLocations = [CLLocationCoordinate2D]()
     let locationManager = CLLocationManager()
+    let logManager = LogManager.shared
     
     let POLYLINE_WIDTH = 3.0
     let MIN_DISTANCE = 30.0
@@ -81,14 +82,16 @@ class ViewController: UIViewController {
             
             // Remove polyline on mainMapView.
             mainMapView.removeOverlays(mainMapView.overlays)
-            
             userLocations.removeAll()
-            
             
             if let _ = navigationItem.rightBarButtonItem {
                 self.navigationItem.rightBarButtonItems?.remove(at: 0)
             }
-//            navigationItem.rightBarButtonItems?.remove(at: 0)
+        }
+        
+        if !moveTrackEnable {
+            mainMapView.removeOverlays(mainMapView.overlays)
+            userLocations.removeAll()
         }
     }
     
@@ -123,6 +126,7 @@ extension ViewController: CLLocationManagerDelegate {
         let coordinate = nowLocation.coordinate
         print("Coordinate: \(coordinate.latitude, coordinate.longitude)")
         
+        logManager.append(location: nowLocation)
         userLocations.append(coordinate)
 
         if updateLocationEnable {
@@ -139,10 +143,7 @@ extension ViewController: CLLocationManagerDelegate {
             // Add polyline on the map.
             let polyline = MKPolyline(coordinates: userLocations, count: userLocations.count)
             mainMapView.addOverlay(polyline)
-        } else {
-            mainMapView.removeOverlays(mainMapView.overlays)
         }
-        
     }
     
 }
